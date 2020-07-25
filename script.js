@@ -19,7 +19,7 @@ const stepsBtn = document.querySelector('.steps-button');
 const ingredientsList = () => {
     const myIngredients = `
     <div class="new-ingredients">
-        <div class="new-ing">
+        <div class="inner-ingredients">
             <span class="set-ingredients">${ingredientsInput.value}</span>
         </div>
     </div>
@@ -30,7 +30,7 @@ const ingredientsList = () => {
 const stepsList = () => { 
     const mySteps = `
     <div class="new-steps">
-        <div class="new-ste">
+        <div class="inner-steps">
             <span class="set-steps">${stepsInput.value}</span>
         </div>
     </div>
