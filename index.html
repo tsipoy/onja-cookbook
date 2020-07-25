@@ -17,8 +17,8 @@
         <input type="text" id="name">
       </label>
       <h3>Picture of the result (URL)</h3>
-      <label for="photo" class="food-picture">
-        <input type="text" id="photo">
+      <label for="url" class="food-picture">
+        <input type="url" id="url">
       </label>
       <h3>Who is the cook?</h3>
       <label for="chef" class="recipe-chef">
@@ -39,22 +39,23 @@
         <option value="60min">60min</option>
         <option value="more than 1h">More than 1h</option>
       </select>
-      <div class="ingredients">
-        <h3>Ingredients</h3>
-        <div class="new-ingredient">
-
-        </div>
-        <button class="ingredients-button">Add a new ingredient to the list</button>
-      </div>
-      <div class="steps">
-        <h3>Steps</h3>
-        <div class="new-steps">
-
-        </div>
-        <button class="steps-button">Add a new step tot he list</button>
-      </div>
     </form>
+    <div class="ingredients">
+      <h3>Ingredients</h3>
+      <div class="new-ingredient">
+      </div>
+      <input type="text" id="ingredients-input">
+      <button class="ingredients-button">Add a new ingredient to the list</button>
+    </div>
+    <div class="steps">
+      <h3>Steps</h3>
+      <div class="new-steps">
+      </div>
+      <input type="text" id="steps-input">
+      <button class="steps-button">Add a new step tot he list</button>
+    </div>
   </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>
