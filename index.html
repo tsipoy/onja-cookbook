@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Onja cookbook</title>
+  <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
@@ -12,25 +13,25 @@
     <form>
       <h1>Onja Cookbook</h1>
       <h3>What's the recipe name?</h3>
-      <label for="text">
-        <input type="text" id="text">
+      <label for="name" class="recipe-name">
+        <input type="text" id="name">
       </label>
       <h3>Picture of the result (URL)</h3>
-      <label for="text">
-        <input type="text" id="text">
+      <label for="photo" class="food-picture">
+        <input type="text" id="photo">
       </label>
       <h3>Who is the cook?</h3>
-      <label for="text">
-        <input type="text" id="text">
+      <label for="chef" class="recipe-chef">
+        <input type="text" id="chef">
       </label>
       <h3>What's the difficulty?</h3>
-      <select for="text">
+      <select name="difficulty" class="select-difficulty">
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
         <option value="hard">Hard</option>
       </select>
       <h3>How much time doeas it takes?</h3>
-      <select for="text">
+      <select name="timing" class="select-timing">
         <option value="less than 15min">Less than 15 min</option>
         <option value="15min">15min</option>
         <option value="30min">30min</option>
@@ -40,9 +41,17 @@
       </select>
       <div class="ingredients">
         <h3>Ingredients</h3>
+        <div class="new-ingredient">
+
+        </div>
+        <button class="ingredients-button">Add a new ingredient to the list</button>
       </div>
       <div class="steps">
         <h3>Steps</h3>
+        <div class="new-steps">
+
+        </div>
+        <button class="steps-button">Add a new step tot he list</button>
       </div>
     </form>
   </div>
