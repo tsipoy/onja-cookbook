@@ -2,11 +2,8 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.cook-book {
-  text-align: center;
-}
 
-form {
+.cook-book {
   border: 2px black solid;
   border-radius: 5px;
   padding: 1rem;
