@@ -18,19 +18,19 @@ const stepsBtn = document.querySelector('.steps-button');
 
 const ingredientsList = () => {
     const myIngredients = `
-    <div class="ingredients">
-        <div class="new-ingredients">
+    <div class="new-ingredients">
+        <div class="new-ing">
             <span class="set-ingredients">${ingredientsInput.value}</span>
         </div>
     </div>
     `;
-    ingredients .insertAdjacentHTML('afterbegin', myIngredients);
+    ingredients.insertAdjacentHTML('afterbegin', myIngredients);
 };
 
-const stepsList = () => {
+const stepsList = () => { 
     const mySteps = `
-    <div class="steps">
-        <div class="new-steps">
+    <div class="new-steps">
+        <div class="new-ste">
             <span class="set-steps">${stepsInput.value}</span>
         </div>
     </div>
@@ -40,6 +40,3 @@ const stepsList = () => {
 
 ingredientsBtn.addEventListener('click', ingredientsList);
 stepsBtn.addEventListener('click', stepsList);
-
-
-

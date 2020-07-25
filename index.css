@@ -13,3 +13,11 @@ html {
   background: brown;
   color: white;
 }
+
+.inner-steps,
+.inner-ingredients {
+  background-color: white;
+  border: 1px black solid;
+  padding: 5px;
+  color: black;
+}
