@@ -1,42 +1,68 @@
 // Grab elements
-const divWrapper = document.querySelector('.cook-book');
-const form = document.querySelector('form');
-const name = document.querySelector('.recipe-name');
-const nameInput = document.querySelector('#name');
-const photoUrl = document.querySelector('.food-picture');
-const url = document.querySelector('.foo-picture');
-const UrlInput = document.querySelector('#url');
-const chef = document.querySelector('.recipe-chef');
-const chefInput = document.querySelector('#chef');
-const steps = document.querySelector('.new-steps');
-const ingredients = document.querySelector('.new-ingredient');
-const ingredientsInput = document.querySelector('#ingredients-input');
-const stepsInput = document.querySelector('#steps-input');
+// Create the html
+// Create functions
+// Event delegation
+// Use loop
+// Add event listener for the submit button
+// Console the submit
+
+// Grab elements
+const formElement = document.querySelector('form');
 const ingredientsBtn = document.querySelector('.ingredients-button');
 const stepsBtn = document.querySelector('.steps-button');
+const ingredientListElement = document.querySelector('#ingredientList');
+const stepListElement = document.querySelector('#stepList');
 
-
-const ingredientsList = () => {
-    const myIngredients = `
-    <div class="new-ingredients">
-        <div class="inner-ingredients">
-            <span class="set-ingredients">${ingredientsInput.value}</span>
-        </div>
-    </div>
+const addIngedientInput = e => {
+const number = ingredientListElement.children.length + 1;
+const myIngredients = `
+    <li>
+        <input id="igredient${number}" type="text" name="ingedients${number}">
+    </li>
     `;
-    ingredients.insertAdjacentHTML('afterbegin', myIngredients);
+    ingredientListElement.insertAdjacentHTML('beforeend', myIngredients);
 };
 
-const stepsList = () => { 
+const addStepsInput = e => { 
+    const number = stepListElement.children.length + 1;
     const mySteps = `
-    <div class="new-steps">
-        <div class="inner-steps">
-            <span class="set-steps">${stepsInput.value}</span>
-        </div>
-    </div>
+        <li>
+            <input id="step${number}" type="text" name="steps${number}">
+        </li>
     `;
-    steps.insertAdjacentHTML('afterbegin', mySteps);
+    stepListElement.insertAdjacentHTML('beforeend', mySteps);
 };
 
-ingredientsBtn.addEventListener('click', ingredientsList);
-stepsBtn.addEventListener('click', stepsList);
+const handleSubmit = e => {
+    e.preventDefault();
+    console.log('submit', e);
+    const form = e.currentTarget;
+    const { title, picture, author, difficulty, timing } = form;
+    const ingredients = [];
+    for (let i = 0; i < ingredientListElement.children.length; i++){
+        ingredients.push(ingredientListElement.children[i].children[0].value)
+    };
+    console.log(ingredients);
+
+    const steps = [];
+    for (let i = 0; i < stepListElement.children.length; i++){
+        steps.push(stepListElement.children[i].children[0].value)
+    };
+    console.log(steps);
+
+    const recipes = [];
+    const recipe = {
+	    title: title.value,
+	    picture: picture.value,
+	    author: author.value,
+	    difficulty: difficulty.value,
+        timing: timing.value,
+    };
+    console.log(recipe);
+    console.log(recipes);
+}
+
+ingredientsBtn.addEventListener('click', addIngedientInput);
+stepsBtn.addEventListener('click', addStepsInput);
+formElement.addEventListener('submit', handleSubmit);
+
