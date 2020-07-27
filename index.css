@@ -11,13 +11,34 @@ html {
 	min-width: 200px;
 	min-height: 200px;
   background: brown;
-  color: white;
+  color: black;
+}
+
+.steps,
+.ingredients {
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+
 }
 
 .inner-steps,
 .inner-ingredients {
   background-color: white;
   border: 1px black solid;
-  padding: 5px;
+  padding: 2px;
   color: black;
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.submit-button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  margin-top: 1rem;
+  font-size: 18px;
 }
